@@ -25,18 +25,18 @@
 
 / {
     macros {
-        vimnexttab: vimgt {
+        vimnexttab: vimnexttab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp G &kp T>;
-            label = "VIMGT";
+            label = "VIMNEXTTAB";
         };
 
-        vimprevtab: vimgT {
+        vimprevtab: vimprevtab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp G &kp LS(T)>;
-            label = "VIMGT";
+            label = "VIMPREVTAB";
         };
     };
 
