@@ -24,12 +24,28 @@
 #define RAISE   2
 
 / {
+    macros {
+        vimgt: vimgt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp T>;
+            label = "VIMGT";
+        };
+
+        vimgT: vimgT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp LS(T)>;
+            label = "VIMGT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp ESCAPE      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                                                     &kp NUMBER_6  &kp N7  &kp N8     &kp N9      &kp N0         &none
+&kp ESCAPE      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                                                     &kp NUMBER_6  &kp N7  &kp N8     &kp N9      &kp N0         &kp MINUS
 &none           &kp Q         &kp W         &kp E         &kp R         &kp T   &none                                           &none              &kp Y         &kp U   &kp I      &kp O       &kp P          &kp BACKSLASH
 &kp TAB         &kp A         &kp S         &kp D         &kp F         &kp G   &none                                           &none              &kp H         &kp J   &kp K      &kp L       &kp SEMICOLON  &kp SQT
 &kp LEFT_SHIFT  &kp Z         &kp X         &kp C         &kp V         &kp B   &kp LCTRL     &kp LEFT_ALT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N         &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
@@ -39,11 +55,11 @@
 
         lower_layer {
             bindings = <
-&bootloader  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                                                &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&none        &none   &none   &none   &none   &none   &none                          &none          &none   &none   &none   &none   &none   &kp F11
-&none        &none   &none   &kp F1  &kp F2  &none   &none                          &none          &none   &none   &none   &none   &none   &kp F12
-&none        &none   &none   &none   &none   &none   &none  &none     &none         &none          &none   &none   &none   &none   &none   &kp ENTER
-&none        &none   &none   &none   &none           &none  &trans    &kp LC(LEFT)  &kp LC(RIGHT)          &none   &none   &none   &none   &none
+&none  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                                      &kp F6        &kp F7        &kp F8        &kp F9     &kp F10  &kp EQUAL
+&none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &bootloader                          &bootloader    &kp NUMBER_6  &kp NUMBER_7  &kp N8        &kp N9     &kp N0   &none
+&none  &none         &none         &kp F1        &kp F2        &none   &none                                &none          &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT  &none    &none
+&none  &none         &none         &none         &none         &none   &none        &none     &vimgT        &vimgt         &none         &none         &none         &none      &none    &kp ENTER
+&none  &none         &none         &none         &none                 &none        &trans    &kp LC(LEFT)  &kp LC(RIGHT)                &none         &none         &none      &none    &none
             >;
         };
 
