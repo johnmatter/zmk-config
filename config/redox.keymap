@@ -63,17 +63,17 @@
 &none           &kp Q         &kp W         &kp E         &kp R         &kp T   &macOS_screenshot_window                                    &none              &kp Y         &kp U   &kp I      &kp O       &kp P          &kp BACKSLASH
 &kp TAB         &kp A         &kp S         &kp D         &kp F         &kp G   &macOS_screenshot                                           &kp ENTER          &kp H         &kp J   &kp K      &kp L       &kp SEMICOLON  &kp SQT
 &kp LEFT_SHIFT  &kp Z         &kp X         &kp C         &kp V         &kp B   &kp LCTRL                 &kp LEFT_ALT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N         &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
-&kp LCTRL       &kp LEFT_ALT  &none         &none         &none                 &kp LEFT_GUI              &mo LOWER       &kp BACKSPACE     &kp SPACE                        &none   &none      &none       &none          &none
+&kp LCTRL       &kp LEFT_ALT  &none         &none         &none                 &kp LEFT_GUI              &mo 1           &kp BACKSPACE     &kp SPACE                        &none   &none      &none       &none          &none
             >;
         };
 
         lower_layer {
             bindings = <
-&none  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                                         &kp F6         &kp F7         &kp F8         &kp F9         &kp F10  &kp EQUAL
-&none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5     &bootloader                          &bootloader    &kp NUMBER_6   &kp NUMBER_7   &kp N8         &kp N9         &kp N0   &none
-&none  &none         &none         &kp F1        &kp F2        &kp ENTER  &none                                &none          &kp LEFT       &kp DOWN       &kp UP_ARROW   &kp RIGHT      &none    &none
-&none  &none         &none         &none         &none         &none      &none        &none     &vimprevtab   &vimnexttab    &kp LC(LA(N))  &kp LA(LC(M))  &kp LC(LA(H))  &kp LA(LC(X))  &none    &kp ENTER
-&none  &none         &none         &none         &none                    &none        &trans    &kp LC(LEFT)  &kp LC(RIGHT)                 &none          &none          &none          &none    &none
+&kp LG(LC(F))  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                                         &kp F6         &kp F7         &kp F8         &kp F9         &kp F10  &kp EQUAL
+&none          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5     &bootloader                          &bootloader    &kp NUMBER_6   &kp NUMBER_7   &kp N8         &kp N9         &kp N0   &none
+&none          &none         &none         &kp F1        &kp F2        &kp ENTER  &none                                &none          &kp LEFT       &kp DOWN       &kp UP_ARROW   &kp RIGHT      &none    &kp GRAVE
+&none          &none         &none         &none         &none         &none      &none        &none     &vimprevtab   &vimnexttab    &kp LC(LA(N))  &kp LA(LC(M))  &kp LC(LA(H))  &kp LA(LC(X))  &none    &kp ENTER
+&none          &none         &none         &none         &none                    &none        &trans    &kp LC(LEFT)  &kp LC(RIGHT)                 &none          &none          &none          &none    &none
             >;
         };
 
